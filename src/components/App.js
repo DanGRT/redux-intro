@@ -26,11 +26,11 @@ class App extends React.Component {
     const { store } = this.props;
 
     const reduxState = store.getState();
-
+    console.log("5. state is updated from reduxstate", reduxState.selectedButton)
     this.setState({
       selectedButton: reduxState.selectedButton
     }, () => console.log(`6. New value of state is ${this.state.selectedButton}`));
-    console.log("5. state is updated from reduxstate", reduxState.selectedButton)
+
 
   }
 
